@@ -1,4 +1,4 @@
-public class Client {
+public class Client extends Persoana{
     String nume;
     int varsta;
     long cont;
@@ -14,7 +14,8 @@ public class Client {
         return tr;
     }
 
-    public Client(String nume, int varsta, long cont) {
+    public Client(String nume, int varsta, long cont, long cnp, String adresa) {
+    	super(cnp, adresa);
         this.nume = nume;
         this.varsta = varsta;
         this.cont = cont;
