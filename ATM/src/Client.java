@@ -1,4 +1,4 @@
-public class Client extends Persoana{
+public class Client extends Persoana implements Contract, Actaditional{
     String nume;
     int varsta;
     long cont;
@@ -20,4 +20,29 @@ public class Client extends Persoana{
         this.varsta = varsta;
         this.cont = cont;
     }
+    public void setAdresa(String adresa) {
+    	this.adresa = adresa + ", cod_postal=041921";
+    }
+    public void setAdresa(String adresa, long cod) {
+    	this.adresa = adresa + ", cod_postal=" + cod;
+    }
+	@Override
+	public void inchContract() {
+		// TODO Auto-generated method stub
+		System.out.println("Incheiat, la data...");
+		
+	}
+	@Override
+	public void rezContract() {
+		// TODO Auto-generated method stub
+		System.out.println("Reziliat, la data...");
+	}
+	@Override
+	public void schContract() {
+		// TODO Auto-generated method stub
+		System.out.println("Modificat, la data...");
+	}
+	public void transferaCash(Transfer t) {
+		System.out.println(t.message());
+	};
 }
